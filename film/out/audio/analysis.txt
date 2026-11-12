@@ -1,0 +1,126 @@
+== 1. format / levels ==
+  /tmp/hoplite/workspace/film/out/audio/score.wav: 48000 Hz, 2 ch, 60.0000 s
+  [PASS] 48 kHz stereo, exactly 60.000 s
+  sample peak -1.60 dBFS, true peak -1.53 dBTP, integrated -16.00 LUFS, DC 5.6e-07
+  [PASS] true peak <= -1.0 dBTP
+  [PASS] integrated loudness -16 LUFS +/- 1.5
+  [PASS] no clipped samples
+
+== 3. dynamics: RMS dBFS per 0.5 s window ==
+    0.0s |  -47.0  -43.8  -39.4  -34.5  -34.2  -32.0  -31.2  -32.6  -35.2  -35.9
+    5.0s |  -35.8  -36.5  -36.4  -32.7  -30.7  -21.1  -23.1  -22.6  -23.2  -23.1
+   10.0s |  -23.2  -22.9  -23.4  -26.9  -22.3  -21.9  -22.9  -25.3  -23.4  -22.2
+   15.0s |  -21.1  -20.4  -20.8  -22.9  -24.5  -27.1  -29.4  -32.2  -32.4  -32.5
+   20.0s |  -32.6  -24.2  -21.9  -18.6  -18.0  -19.4  -22.1  -23.2  -18.5  -21.7
+   25.0s |  -24.5  -23.3  -16.9  -17.8  -17.8  -18.5  -17.8  -17.5  -18.6  -18.1
+   30.0s |  -17.5  -15.5  -14.7  -15.3  -13.7  -15.6  -14.5  -15.0  -27.5  -37.2
+   35.0s |  -37.1  -35.1  -30.5  -26.7  -36.1  -43.0  -32.5  -38.7  -33.4  -31.0
+   40.0s |  -26.2  -26.4  -28.1  -26.2  -19.3  -13.2  -13.4  -16.0  -15.4  -15.5
+   45.0s |  -15.3  -15.3  -15.9  -15.8  -14.9  -13.1  -17.1  -15.7  -15.2  -13.0
+   50.0s |  -12.2  -13.6  -44.3  -49.8  -49.7  -45.2  -33.4  -32.4  -33.5  -32.0
+   55.0s |  -34.8  -33.1  -31.2  -30.7  -30.9  -31.2  -30.6  -26.0  -28.8  -44.1
+  opening -34.8 | reveal jump +9.6 dB | drive 26-34 -16.3 | 34-42.5 -27.8 | red run -15.0
+  pull (0.6 s steps) -16.4 -15.5 -13.2 -12.4 | close peak window -11.8 | loudest 0.5 s window -11.8 at 50.30s
+  after the close (max 100 ms window, 50.9-52.0 s) -38.5 = 26.8 dB below peak | ending 59.8-end -240.0
+  [PASS] opening at least 18 dB under the climaxes (23.0)
+  [PASS] reveal at 7.5 jumps clearly (+9.6 dB)
+  [PASS] 34-42.5 much quieter than 26-34 (11.5 dB)
+  [PASS] pull rises monotonically
+  [PASS] loudest point of the film is the close at 50.6 s
+  [PASS] near-silence after the close is >= 25 dB below the peak
+  [PASS] silent from 59.8 s
+
+== 4. sync: strongest energy onset near each cue (limit +/- 20 ms) ==
+  -- full mix --   [onset within 20 ms] [strongest within 60 ms]
+    1.60s star lands      +0.4 ms  31.5 dB   |   +0.4 ms  31.5 dB
+    7.50s reveal          +1.7 ms  14.6 dB   |   +1.7 ms  14.6 dB
+   12.20s launch          -9.0 ms  23.6 dB   |   -9.0 ms  23.6 dB
+   15.60s burst           -2.6 ms  46.7 dB   |   -2.6 ms  46.7 dB
+   24.30s first pierce    +0.7 ms   9.0 dB   |   +0.7 ms   9.0 dB
+   26.50s pierce          +0.1 ms   7.5 dB   |   +0.1 ms   7.5 dB
+   27.00s pierce          -0.1 ms   8.6 dB   |   -0.1 ms   8.6 dB
+   27.50s pierce          +0.3 ms   8.4 dB   |   +0.3 ms   8.4 dB
+   28.00s pierce          +1.5 ms   7.1 dB   |   +1.5 ms   7.1 dB
+   28.50s pierce          +0.6 ms   8.0 dB   |   +0.6 ms   8.0 dB
+   29.00s pierce          +1.4 ms   7.4 dB   |   +1.4 ms   7.4 dB
+   29.50s pierce          -0.3 ms   7.4 dB   |   -0.3 ms   7.4 dB
+   30.00s pierce          +1.3 ms  18.0 dB   |   +1.3 ms  18.0 dB
+   30.50s pierce          +0.2 ms  11.3 dB   |   +0.2 ms  11.3 dB
+   35.20s whip-snap       -7.4 ms  23.6 dB   |   -7.4 ms  23.6 dB
+   38.20s catch           +0.5 ms  48.5 dB   |   +0.5 ms  48.5 dB
+   41.60s knot tok        +0.3 ms   7.7 dB   |   +0.3 ms   7.7 dB
+   43.00s red pierce      +1.7 ms   7.8 dB   |   +1.7 ms   7.8 dB
+   43.50s red pierce      +1.2 ms   4.4 dB   |  -31.3 ms   6.5 dB
+   44.00s red pierce      +1.2 ms   8.9 dB   |   +1.2 ms   8.9 dB
+   44.50s red pierce      +1.5 ms   7.0 dB   |   +1.5 ms   7.0 dB
+   45.00s red pierce      +0.8 ms   6.8 dB   |   +0.8 ms   6.8 dB
+   45.50s red pierce      +0.7 ms   4.6 dB   |  -32.1 ms   4.7 dB
+   46.00s red pierce      +0.6 ms   5.5 dB   |  -49.1 ms   7.0 dB
+   46.50s red pierce      -6.6 ms   6.2 dB   |  -56.8 ms   7.9 dB
+   47.60s last pierce     +0.4 ms  16.2 dB   |   +0.4 ms  16.2 dB
+   50.60s sky closes      -1.4 ms   9.9 dB   |   -1.4 ms   9.9 dB
+  [PASS] full mix: every cue has an onset within 20 ms (largest offset 9.0 ms, weakest rise 4.4 dB)
+  -- effects stems only (score.py --stems) --   [onset within 20 ms] [strongest within 60 ms]
+    1.60s star lands      +0.3 ms  31.7 dB   |   +0.3 ms  31.7 dB
+    7.50s reveal          -8.5 ms  27.4 dB   |   -8.5 ms  27.4 dB
+   12.20s launch          -2.6 ms  25.7 dB   |   -2.6 ms  25.7 dB
+   15.60s burst           -2.3 ms  10.1 dB   |   -2.3 ms  10.1 dB
+   24.30s first pierce    -3.8 ms  26.2 dB   |   -3.8 ms  26.2 dB
+   26.50s pierce          -9.5 ms  31.4 dB   |   -9.5 ms  31.4 dB
+   27.00s pierce          -4.2 ms  31.6 dB   |   -4.2 ms  31.6 dB
+   27.50s pierce          -4.0 ms  29.4 dB   |   -4.0 ms  29.4 dB
+   28.00s pierce          -9.6 ms  26.8 dB   |   -9.6 ms  26.8 dB
+   28.50s pierce          -9.4 ms  30.4 dB   |   -9.4 ms  30.4 dB
+   29.00s pierce          -9.4 ms  29.4 dB   |   -9.4 ms  29.4 dB
+   29.50s pierce          -3.7 ms  26.4 dB   |   -3.7 ms  26.4 dB
+   30.00s pierce          -4.2 ms  30.3 dB   |   -4.2 ms  30.3 dB
+   30.50s pierce          -4.3 ms  28.7 dB   |   -4.3 ms  28.7 dB
+   35.20s whip-snap       -7.8 ms  24.1 dB   |   -7.8 ms  24.1 dB
+   38.20s catch          -10.4 ms  28.5 dB   |  -10.4 ms  28.5 dB
+   41.60s knot tok        -5.1 ms  16.1 dB   |   -5.1 ms  16.1 dB
+   43.00s red pierce      -9.9 ms  30.5 dB   |   -9.9 ms  30.5 dB
+   43.50s red pierce      -4.0 ms  24.4 dB   |   -4.0 ms  24.4 dB
+   44.00s red pierce      -9.4 ms  25.2 dB   |   -9.4 ms  25.2 dB
+   44.50s red pierce      -3.6 ms  24.8 dB   |   -3.6 ms  24.8 dB
+   45.00s red pierce     -10.0 ms  26.2 dB   |  -10.0 ms  26.2 dB
+   45.50s red pierce      -9.6 ms  30.2 dB   |   -9.6 ms  30.2 dB
+   46.00s red pierce      -3.4 ms  27.0 dB   |   -3.4 ms  27.0 dB
+   46.50s red pierce      -9.6 ms  27.5 dB   |   -9.6 ms  27.5 dB
+   47.60s last pierce    -18.7 ms  33.3 dB   |  -18.7 ms  33.3 dB
+   50.60s sky closes     -18.7 ms  34.8 dB   |  -18.7 ms  34.8 dB
+  [PASS] effects stems only (score.py --stems): every cue has an onset within 20 ms (largest offset 18.7 ms, weakest rise 10.1 dB)
+
+== 5. spectrum: share of energy per band ==
+      0-   40 Hz   -34.6 dB
+     40-   80 Hz    -5.5 dB
+     80-  160 Hz    -7.4 dB
+    160-  320 Hz    -8.6 dB
+    320-  640 Hz    -8.0 dB
+    640- 1250 Hz    -8.0 dB
+   1250- 2500 Hz   -12.4 dB
+   2500- 5000 Hz   -17.4 dB
+   5000- 9000 Hz   -24.4 dB
+   9000-24000 Hz   -35.5 dB
+  [PASS] little energy below 40 Hz (-34.6 dB)
+  [PASS] little energy above 9 kHz (-35.5 dB)
+  [PASS] no single band dominates
+
+== 5b. theme: prominence of each expected melody note (dB over 200-4000 Hz median) ==
+  music box, 2.0 s    40.2  39.3  38.5  45.9  40.4  42.3  35.0  42.3
+  [PASS] theme audible: music box, 2.0 s (weakest note 35.0 dB)
+  heroic, 26 s        38.7  33.2  46.6  27.5
+  [PASS] theme audible: heroic, 26 s (weakest note 27.5 dB)
+  broad, 31 s         36.6  35.2  36.2  38.9
+  [PASS] theme audible: broad, 31 s (weakest note 35.2 dB)
+  tender, 53 s        47.1  50.1  49.4  48.0  43.3  43.5  42.9  44.4
+  [PASS] theme audible: tender, 53 s (weakest note 42.9 dB)
+
+== 6. stereo ==
+  full-band L/R correlation per 2 s: 0.57 0.46 0.53 0.78 0.49 0.50 0.70 0.75 0.60 0.43 0.71 0.60 0.68 0.72 0.77 0.69 0.69 0.42 0.59 0.49 0.32 0.76 0.71 0.81 0.71 0.78 0.60 0.67 0.73
+  below 150 Hz:                      0.97 0.97 0.97 1.00 0.99 0.98 1.00 1.00 1.00 0.99 0.99 0.99 1.00 1.00 1.00 1.00 1.00 0.99 0.99 1.00 0.98 1.00 1.00 1.00 1.00 1.00 0.99 0.99 0.99
+  whole film: correlation 0.71, side/mid -7.8 dB, mono fold-down loss 0.7 dB
+  [PASS] correlation never negative (min 0.32)
+  [PASS] not pinned at +1 (stereo width present)
+  [PASS] lows are mono-compatible (min 0.97)
+
+ALL CHECKS PASSED
